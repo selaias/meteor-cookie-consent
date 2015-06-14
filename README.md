@@ -1,14 +1,24 @@
-## cookie-consent
+# cookie-consent
 
-Create easily a fully customizable EU Law Cookie consent banner for your websites.
+Create easily a fully customizable bootstrap EU Law (imply) Cookie consent banner for your website.
 
-#install
+## Install
 
 ```js
 $ meteor add selaias:cookie-consent
 ```
 
-#Usage
+## Usage
+
+Place `{{> cookieConsent}}` in your main template. Something like:
+
+```handlebars
+<body>
+    {{> cookieConsent}}
+</body>
+```
+
+and then place under client/lib/cookie_consent.js file the initialisation code
 
 ```js
 
@@ -25,3 +35,10 @@ var options = {
 CookieConsent.init(options);
 
 ```
+
+## Feedback
+This is the most basic setup, customization ideas are always welcome!
+
+## Licence
+
+[MIT License](http://opensource.org/licenses/MIT)

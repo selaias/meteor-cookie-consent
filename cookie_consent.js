@@ -15,7 +15,7 @@ CookieConsent._config = {
   cookieMessage: "By using our website you are consenting to our use of cookies in accordance with our Cookie Policy",
   showLink: true,
   position: 'top',
-  linkText: "More info",
+  linkText: "Read more",
   linkRouteName: "/cookiePolicy",
   html: false,
   className: null,
