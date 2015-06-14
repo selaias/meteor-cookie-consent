@@ -6,7 +6,7 @@ Create easily a fully customizable EU Law Cookie consent banner for your website
 
 ```js
 $ meteor add selaias:cookie-consent
-```js
+```
 
 #Usage
 
@@ -24,4 +24,4 @@ var options = {
 
 CookieConsent.init(options);
 
-```js
+```
