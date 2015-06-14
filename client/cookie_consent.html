@@ -1,0 +1,18 @@
+<template name="cookieConsent">
+	{{#if useCookies}}
+			<div id="cookie-consent" class="alert alert-info cookie-policy-{{position}} {{className}}">
+        {{#if isHtml}}
+          {{{cookieMessage}}}
+        {{else}}
+          <i class="fa fa-info-circle fa-lg"></i>&nbsp;{{cookieMessage}}
+          &nbsp;&nbsp;
+          {{#if hasPolicyLink}}
+            <a href="{{policyLink}}" id="cookiePolicyLink" class="alert-link">{{cookiePolicyLinkText}}</a>
+          {{/if}}
+        {{/if}}
+         <button id="closeAlert" type="button" class="close" data-dismiss="alert" aria-hidden="true">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+        </button>
+			</div>
+		{{/if}}
+</template>

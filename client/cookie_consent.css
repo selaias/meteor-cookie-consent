@@ -1,0 +1,28 @@
+.cookie-policy-top {
+  top: 0;
+	position: fixed;
+	text-align: center;
+	vertical-align: baseline;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 0px;
+  z-index: 2500;
+}
+
+
+.cookie-policy-bottom {
+	position: fixed;
+	text-align: center;
+	vertical-align: baseline;
+	padding-top: 10px;
+	border-radius: 0px;
+  z-index: 2500;
+  bottom: 0;
+  width: 100%;
+	max-width: 100%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: auto;
+}
