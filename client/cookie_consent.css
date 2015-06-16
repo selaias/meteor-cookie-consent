@@ -9,8 +9,6 @@
 	border-radius: 0px;
   z-index: 2500;
 }
-
-
 .cookie-policy-bottom {
 	position: fixed;
 	text-align: center;
@@ -25,4 +23,82 @@
 	left: 0;
 	right: 0;
 	top: auto;
+}
+.cookie-policy{
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  background-color:#005aa2;
+  font-size:13px;
+  line-height:1.25em;
+  position:fixed;
+  bottom:0;
+  left:0;
+  color:#fff;
+  padding:8px;
+  width:100%;
+  z-index:1000;
+}
+.cookie-policy>p{
+  margin-bottom:15px;
+  color:#fff
+}
+.cookie-policy>p:last-child{
+  margin-bottom:0
+}
+.cookie-policy a{
+  -moz-transition:color 0.35s ease;
+  -o-transition:color 0.35s ease;
+  -webkit-transition:color 0.35s ease;
+  transition:color 0.35s ease;
+  color:#fff
+}
+.cookie-policy a:active,
+.cookie-policy a:focus,
+.cookie-policy a:hover{
+  color:rgba(255,255,255,0.8) !important;
+  text-decoration:none
+}
+.cookie-policy__header{
+  font-size:18px;
+  margin-bottom:7.5px
+}
+.cookie-policy__action{
+  text-align:right
+}
+.cookie-policy__btn{
+  -moz-border-radius:9px;
+  -webkit-border-radius:9px;
+  border-radius:9px;
+  display:inline-block;
+  vertical-align:middle;
+  *vertical-align:auto;
+  *zoom:1;
+  *display:inline;
+  font-size:11px;
+  border:1px solid;
+  padding:6px 12px;
+  white-space:nowrap
+}
+.cookie-policy__btn--dark-pattern{
+  filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity:0.7
+}
+@media (min-width: 992px){
+  .cookie-policy{
+    -moz-border-radius:9px;
+    -webkit-border-radius:9px;
+    border-radius:9px;
+    bottom:15px;
+    right:15px;
+    left:auto;
+    width:350px;
+    padding:15px;
+    text-transform:uppercase}
+  .cookie-policy__header{
+    margin-bottom:15px
+  }
+  .cookie-policy__action{
+    text-align:center
+  }
 }
