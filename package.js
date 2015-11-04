@@ -1,6 +1,6 @@
 Package.describe({
   name: 'selaias:cookie-consent',
-  version: '0.2.0',
+  version: '0.2.1',
   summary: 'Easily and fully customizable EU Cookie Consent alert.',
   git: 'http://github.com/selaias/meteor-cookie-consent.git',
   documentation: 'README.md'
