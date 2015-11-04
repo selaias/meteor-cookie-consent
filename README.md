@@ -36,7 +36,7 @@ var options = {
   linkRouteName: "/cookiePolicy",
   acceptButtonText: "Accept and Continue",
   html: false,
-  expiresInDays: 7
+  expirationInDays: 7
 };
 
 CookieConsent.init(options);
@@ -55,7 +55,7 @@ var optionsImply = {
   linkRouteName: "/cookiePolicy",
   html: false,
   className: null,
-  expiresInDays: 7
+  expirationInDays: 7
 };
 
 CookieConsent.init(optionsImply);
