@@ -2,7 +2,7 @@ if (typeof CookieConsent == 'undefined') {
   CookieConsent = {};
 }
 
-var CONFIG_CHECK = {
+const CONFIG_CHECK = {
   cookieTitle: Match.Optional(String),
   acceptButtonText: Match.Optional(String),
   cookieMessage: Match.Optional(String),

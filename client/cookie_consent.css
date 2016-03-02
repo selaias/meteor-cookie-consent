@@ -8,6 +8,7 @@
 	padding-bottom: 10px;
 	border-radius: 0px;
   z-index: 2500;
+  margin:0 !important;
 }
 .cookie-policy-bottom {
 	position: fixed;
@@ -16,14 +17,19 @@
 	padding-top: 10px;
 	border-radius: 0px;
   z-index: 2500;
-  bottom: 0;
   width: 100%;
 	max-width: 100%;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	top: auto;
+	margin:0 !important;
 }
+
+/*#cookie-consent .alert, .alert-info {*/
+/*  margin:0 !important;*/
+/*}*/
+
 .cookie-policy{
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
