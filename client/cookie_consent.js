@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const helpers = {
+=======
+var helpers = {
+>>>>>>> 7a568ce26b323c06fc0d8ab11af97a6a56a7f9d4
   acceptButtonText: function(){
     return CookieConsent.getConfig('acceptButtonText');
   },
@@ -31,6 +35,7 @@ const helpers = {
   },
   showMessage: function(){
     var cookie = Cookie.get('cookie-consent');
+     console.log(cookie)
     if (cookie){
       return false;
     }else{
