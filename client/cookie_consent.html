@@ -1,0 +1,49 @@
+<template name="cookieConsent">
+  {{#if showMessage}}
+  <div id="js-cookie-policy-default" class="alert cookie-policy" >
+    <header class="cookie-policy__header">
+        <strong>{{cookieTitle}}</strong>
+        <a href="#" class="pull-right alert-close" data-dismiss="alert">
+            <i class="fa fa-times"></i>
+            <span class="sr-only">Close</span>
+        </a>
+    </header>
+    {{#if isHtml}}
+      {{{cookieMessage}}}
+    {{else}}
+      <p>
+        {{cookieMessage}}
+      </p>
+    {{/if}}
+    <p class="cookie-policy__action">
+      {{#if hasPolicyLink}}
+        <a href="{{policyLink}}" id="cookiePolicyLink" class="cookie-policy__btn cookie-policy__btn--dark-pattern">{{cookiePolicyLinkText}}</a>
+      {{/if}}
+        <a href="#" id="acceptCookies" class="cookie-policy__btn alert-close" data-dismiss="alert"><strong>{{acceptButtonText}}</strong></a>
+    </p>
+  </div>
+  {{/if}}
+</template>
+
+<template name="cookieConsentImply">
+  {{#if showMessage}}
+    <div id="cookie-consent" class="alert alert-info cookie-policy-{{position}} {{className}}">
+      <button id="closeAlert" type="button" class="close" data-dismiss="alert" aria-hidden="true">
+        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+      </button>
+      {{#if isHtml}}
+        {{{cookieMessage}}}
+      {{else}}
+        <i class="fa fa-info-circle fa-lg"></i>
+        &nbsp;&nbsp;
+        {{cookieMessage}}  
+        <br/>
+        {{cookieMessageImply}}
+          {{#if hasPolicyLink}}
+             &nbsp;&nbsp;
+            <a href="{{policyLink}}" id="cookiePolicyLink" class="alert-link">{{cookiePolicyLinkText}}</a>
+          {{/if}}
+      {{/if}}
+    </div>
+  {{/if}}
+</template>
