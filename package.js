@@ -7,10 +7,10 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom("METEOR@1.2.1");
+  api.versionsFrom("METEOR@1.4");
 	api.use(['templating', 'check', 'underscore', 'ecmascript', 'reactive-var'], 'client');
 
-  api.use('ostrio:cookies');
+  api.use('ostrio:cookies@2.1.2');
 
   api.addFiles('cookie_consent.js', 'client');
 
