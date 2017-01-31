@@ -1,3 +1,5 @@
+var cookies = new Cookies();
+
 const helpers = {
   acceptButtonText: function(){
     return CookieConsent.getConfig('acceptButtonText');
@@ -30,7 +32,10 @@ const helpers = {
     return CookieConsent.getConfig('expirationInDays') || 7;
   },
   showMessage: function(){
-    let cookie = Cookie.get('cookie-consent');
+    if (CookieConsent.getConfig('forceShow')) {
+      return true;
+    }
+    let cookie = Template.instance().cookieStatus.get();
     if (cookie){
       return false;
     }else{
@@ -38,6 +43,11 @@ const helpers = {
     }
   },
 };
+
+Template.cookieConsent.onCreated(function() {
+  this.cookieStatus = new ReactiveVar();
+  this.cookieStatus.set(cookies.get('cookie-consent'));
+});
 
 Template.cookieConsent.helpers(helpers);
 
@@ -49,6 +59,7 @@ Template.cookieConsent.events({
     let expireInDays = CookieConsent.getConfig('expirationInDays') || 7;
     let dt = new Date();
     dt.setTime(dt.getTime() + (expireInDays*24*60*60*1000));
-    Cookie.set('cookie-consent', "Accepted", {expires: dt});
+    cookies.set('cookie-consent', "Accepted", {expires: dt});
+    Template.instance().cookieStatus.set(cookies.get('cookie-consent'));
   }
 });
