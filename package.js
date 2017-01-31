@@ -8,15 +8,15 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom("METEOR@1.2.1");
-	api.use(['templating', 'check', 'underscore', 'ecmascript'], 'client');
- 
-  api.use('chuangbo:cookie@1.1.0', 'client');
-  
+	api.use(['templating', 'check', 'underscore', 'ecmascript', 'reactive-var'], 'client');
+
+  api.use('ostrio:cookies');
+
   api.addFiles('cookie_consent.js', 'client');
-  
+
   api.addFiles('client/cookie_consent.css', 'client');
   api.addFiles('client/cookie_consent.html', 'client');
   api.addFiles('client/cookie_consent.js', 'client');
-  
+
   api.export('CookieConsent', 'client');
 });
