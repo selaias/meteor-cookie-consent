@@ -17,7 +17,7 @@ Place `{{> cookieConsent}}`  or `{{> cookieConsentImply}}` in your main template
 ```handlebars
 <body>
     {{> cookieConsent}}
-    or 
+    or
     {{> cookieConsentImply}}
 </body>
 ```
@@ -29,25 +29,26 @@ and then place under client/lib/cookie_consent.js file the initialisation code
 var options = {
   cookieTitle: "We use Cookies",
   cookieMessage: "We are using cookies to give you the best"
-     + " experience on our site. Cookies are files stored in your" 
+     + " experience on our site. Cookies are files stored in your"
      + " browser and are used by most websites to help personalise your web experience.",
   showLink: true,
   linkText: "Read more",
   linkRouteName: "/cookiePolicy",
   acceptButtonText: "Accept and Continue",
   html: false,
-  expirationInDays: 7
+  expirationInDays: 7,
+  forceShow: false
 };
 
 CookieConsent.init(options);
 
-// or 
+// or
 
 var optionsImply = {
   cookieMessage: "We are using cookies to give you the best"
-     + " experience on our site. Cookies are files stored in your" 
+     + " experience on our site. Cookies are files stored in your"
      + " browser and are used by most websites to help personalise your web experience.",
-  cookieMessageImply: "By continuing to use our website without changing the settings," 
+  cookieMessageImply: "By continuing to use our website without changing the settings,"
     + " you are agreeing to our use of cookies.",
   showLink: true,
   position: 'top',
@@ -55,7 +56,8 @@ var optionsImply = {
   linkRouteName: "/cookiePolicy",
   html: false,
   className: null,
-  expirationInDays: 7
+  expirationInDays: 7,
+  forceShow: false
 };
 
 CookieConsent.init(optionsImply);

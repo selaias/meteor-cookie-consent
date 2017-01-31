@@ -26,7 +26,8 @@ var _defaults = {
   linkRouteName: "/cookiePolicy",
   acceptButtonText: "Accept and Continue",
   html: false,
-  expirationInDays: 7
+  expirationInDays: 7,
+  forceShow: false
 };
 
 CookieConsent.getConfig = (paramName) => {
