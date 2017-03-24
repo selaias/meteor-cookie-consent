@@ -1,3 +1,4 @@
+import { Cookies } from 'meteor/ostrio:cookies';
 var cookies = new Cookies();
 
 const helpers = {
