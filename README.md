@@ -8,7 +8,7 @@ Create easily a fully customizable bootstrap EU Law (imply) Cookie consent banne
 $ meteor add selaias:cookie-consent
 ```
 
-This packages makes also use of cookies via the `chuangbo:cookie` package.
+This packages makes also use of cookies via the `ostrio:cookies` package.
 
 ## Usage
 
